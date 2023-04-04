@@ -1,8 +1,8 @@
-This mini package provides helper methods to interact with a language model like ChatGPT, to generate some repititive prompt engineering techniques. the why behind it, is I got tired of writing the same context around my needed prompt. Extend it if you like it.
-
 <p align="center">
     <img src="promptman.png">
 </p>
+
+This mini package provides helper methods to interact with a language model like ChatGPT, to generate some repititive prompt engineering techniques. the why behind it, is I got tired of writing the same context around my needed prompt. Extend it if you like it.
 
 NPM Package 
 ```bash
