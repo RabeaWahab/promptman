@@ -1,18 +1,19 @@
-This script defines a class called `Promptman` which provides methods to interact with a language model (LLM) to generate some repititive prompt engineering techniques. 
+This mini package provides methods to interact with a language model (LLM) to generate some repititive prompt engineering techniques. the why behind it, is I got tired of writing the same context around my needed prompt. Extend it if you like.
 
 The `Promptman` class has the following public methods:
 
-1. `text()` - returns the text after executing any method.
-2. `resetInstructions()` - resets the prompt attribute.
-3. `zeroShotCOT()` - sets the prompt attribute for generating a response for a zero-shot chain of thought.
-4. `sentiment()` - sets the prompt attribute for generating a sentiment analysis of text.
-5. `toResponseType()` - sets the type of response to be returned.
-6. `toJson()` - sets the type of response to JSON format.
+1. `resetInstructions()` - resets the prompt attribute.
+2. `zeroShotCOT()` - sets the prompt attribute for generating a response for a zero-shot chain of thought.
+3. `sentiment()` - sets the prompt attribute for generating a sentiment analysis of text.
+4. `toResponseType()` - sets the type of response to be returned.
+5. `toJson()` - sets the type of response to JSON format.
+
+6. `text()` - returns the text after executing any method.
 
 The `Promptman` class is initialized with a `prompt` parameter and is used to interact with GPT or any LLM simply. The class methods can be called in a step-by-step manner to generate text for various purposes like sentiment analysis and zero-shot chain of thought.
 
 Example with ChatGPT:
-```
+```javascript
 const text = new Promptman("what are the steps to make a cup of coffee?")
                     .resetInstructions()
                     .zeroShotCOT()
@@ -20,7 +21,7 @@ const text = new Promptman("what are the steps to make a cup of coffee?")
                     .text()
 ```
  Text generated
-```
+```javascript
 Ignore all previous instructions.
 what are the steps to make a cup of coffee?
 Lets think step by step.
@@ -31,7 +32,7 @@ but JSON , example: { steps: [number: 1, text: 'boil water']}.
 
 ```
 Result
-```
+```json
 {
   "steps": [
     {

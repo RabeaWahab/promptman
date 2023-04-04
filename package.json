@@ -1,15 +1,15 @@
 {
-  "dependencies": {
-  },
-  "devDependencies": {
-    "@types/node": "^18.15.11"
-  },
   "name": "promptman",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Promptman is a small helper class for repetitive prompt engineering techniques",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.3"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,9 @@
     "ChatGPT",
     "LLM"
   ],
-  "author": "Rabea Abdelwahab <wahab.r+npm@gmail.com> (http://rabeawahab.com)",
+  "author": "Rabea Abdelwahab",
   "license": "ISC",
+  "prepublish": "tsc",
   "bugs": {
     "url": "https://github.com/RabeaWahab/promptman/issues"
   },
