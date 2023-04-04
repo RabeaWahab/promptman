@@ -1,12 +1,12 @@
 {
   "name": "promptman",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "Promptman is a small helper class for repetitive prompt engineering techniques",
   "devDependencies": {
     "@types/node": "^18.15.11",
     "typescript": "^5.0.3"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"

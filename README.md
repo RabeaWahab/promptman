@@ -19,6 +19,7 @@ The `Promptman` class is initialized with a `prompt` parameter and is used to in
 
 Example with ChatGPT:
 ```javascript
+import { Promptman } from "promptman"
 const text = new Promptman("what are the steps to make a cup of coffee?")
                     .resetInstructions()
                     .zeroShotCOT()
