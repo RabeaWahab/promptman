@@ -1,6 +1,6 @@
 {
   "name": "promptman",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Promptman is a small helper class for repetitive prompt engineering techniques",
   "devDependencies": {
     "@types/node": "^18.15.11",
