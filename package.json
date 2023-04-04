@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11"
+  },
+  "name": "promptman",
+  "version": "0.0.1",
+  "description": "Promptman is a small helper class for repetitive prompt engineering techniques",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RabeaWahab/promptman.git"
+  },
+  "keywords": [
+    "Prompt",
+    "Engineering",
+    "ChatGPT",
+    "LLM"
+  ],
+  "author": "Rabea Abdelwahab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RabeaWahab/promptman/issues"
+  },
+  "homepage": "https://github.com/RabeaWahab/promptman#readme"
+}
