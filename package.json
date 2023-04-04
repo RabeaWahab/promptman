@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "openai": "^3.2.1"
   },
   "devDependencies": {
     "@types/node": "^18.15.11"
@@ -22,7 +21,7 @@
     "ChatGPT",
     "LLM"
   ],
-  "author": "Rabea Abdelwahab",
+  "author": "Rabea Abdelwahab <wahab.r+npm@gmail.com> (http://rabeawahab.com)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RabeaWahab/promptman/issues"
