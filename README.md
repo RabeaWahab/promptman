@@ -14,6 +14,8 @@ The `Promptman` class has the following public methods:
 1. `resetInstructions()` - resets the prompt attribute.
 2. `zeroShotCOT()` - sets the prompt attribute for generating a response for a zero-shot chain of thought.
 3. `sentiment()` - sets the prompt attribute for generating a sentiment analysis of text.
+4. `stopWhenInDoubt` - makes sure GPT would only answer when its facutal knowlledge
+
 4. `toResponseType()` - sets the type of response to be returned.
 5. `toJson()` - sets the type of response to JSON format.
 
@@ -21,7 +23,8 @@ The `Promptman` class has the following public methods:
 
 The `Promptman` class is initialized with a `prompt` parameter and is used to interact with GPT or any LLM simply. The class methods can be called in a step-by-step manner to generate text for various purposes like sentiment analysis and zero-shot chain of thought.
 
-Example with ChatGPT:
+Example 1:
+
 ```javascript
 import { Promptman } from "promptman"
 const text = new Promptman("what are the steps to make a cup of coffee?")
@@ -74,6 +77,33 @@ Result
       "text": "Enjoy your delicious cup of coffee!"
     }
   ]
+}
+```
+
+Example 2 - Stop when in doubt:
+```javascript
+import { Promptman } from "promptman"
+const text = new Promptman("what would be the best way to solve for global warming?")
+                    .resetInstructions()
+                    .zeroShotCOT()
+                    .stopWhenInDoubt()
+                    .toJson()
+                    .text()
+```
+ Text generated
+```javascript
+Ignore all previous instructions.
+what would be the best way to solve for global warming?
+Lets think step by step.
+If you don't have an answer or there is a probability your answer is wrong or the information is not based on factual knowledge, answer with 'I don't know'
+return the response in the JSON,
+and make sure you don't return anything else
+but JSON .
+```
+Result
+```json
+{
+ "response": "I don't know"
 }
 ```
 
