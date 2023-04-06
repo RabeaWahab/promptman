@@ -41,10 +41,7 @@ export class Promptman {
      * @param type - The type of response to be returned. specifically asking LLM to provide a response in the type provided.
      */
     public toResponseType(type: string, example?: string) {
-        this.prompt =  `${this.prompt} \n 
-                        return the response in the ${type.toUpperCase()}, 
-                        and make sure you don't return anything else 
-                        but ${type.toUpperCase()} ${(example) ? ", example: " + example : ""}.`
+        this.prompt =  `${this.prompt} \n return the response in the ${type.toUpperCase()}, and make sure you don't return anything else but ${type.toUpperCase()} ${(example) ? ", example: " + example : ""}.`
         return this
     }
     
