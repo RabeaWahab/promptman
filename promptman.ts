@@ -21,7 +21,7 @@ export class Promptman {
     }
     
     /**
-     * @param {string} prompt - The text to be used for zero shot chain of thought. LLM will be asked to think step by step.
+     * @param {string} text - The text to be used for zero shot chain of thought.
      */
     public zeroShotCOT(text: string = "") {
         this.prompt = `${this.prompt} \n ${this.replaceTextIfPresent(text, "Lets think step by step.")}`
@@ -29,7 +29,7 @@ export class Promptman {
     }
     
     /**
-     * @param {string} prompt - The text to be used for asking LLM to generate a sentiment of the text provided.
+     * @param {string} text - The text to be used for asking LLM to generate a sentiment.
      */
     public sentiment(text: string = "") {
         this.prompt = `${this.prompt} \n ${this.replaceTextIfPresent(text, "what is the sentiment of the text?")}`
@@ -37,7 +37,6 @@ export class Promptman {
     }
     
     /**
-     * 
      * @param type - The type of response to be returned. specifically asking LLM to provide a response in the type provided.
      */
     public toResponseType(type: string, example?: string) {
@@ -46,13 +45,17 @@ export class Promptman {
     }
     
     /**
-     * @param {string} prompt - The text to be used for asking LLM to generate a response in JSON format.
+     * @param {string} example - The example to be used for asking LLM to generate a response in the type provided.
      */
     public toJson(example?: string) {
         this.toResponseType("json", example)
         return this
     }
 
+    /**
+     * 
+     * @param text - The text to be used for asking LLM to generate a response in the type provided.
+     */
     public stopWhenInDoubt(text: string = "") {
         this.prompt = `${this.prompt} \n ${this.replaceTextIfPresent(text, "If you don't have an answer or there is a probability your answer is wrong or the information is not based on factual knowledge, answer with 'I don't know'")}`
         return this

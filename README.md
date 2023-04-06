@@ -4,7 +4,8 @@
 
 This mini package provides helper methods to interact with a language model like ChatGPT, to generate some repititive prompt engineering techniques. the why behind it, is I got tired of writing the same context around my needed prompt. Extend it if you like it.
 
-NPM Package 
+[https://www.npmjs.com/package/promptman](https://www.npmjs.com/package/promptman?activeTab=readme)
+
 ```bash
 npm install promptman
 ```
