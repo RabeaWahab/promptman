@@ -55,7 +55,7 @@ export class Promptman {
      */
     public toResponseType(type: string, example?: string) {
         const searchRegExp = /{type}/gi;
-        const text = this.defaults.toResponseType.replace(searchRegExp, type.toUpperCase(), )
+        const text = this.defaults.toResponseType.replace(searchRegExp, type.toUpperCase())
         this.prompt =  `${this.prompt} \n ${text} ${this.provideExample(example)}`
         return this
     }
@@ -86,6 +86,10 @@ export class Promptman {
         return (text && text.length > 0) ? text : defaultText
     }
 
+    /**
+     * @param example 
+     * @returns returns the example if present, else returns an empty string.
+     */
     private provideExample(example: string = "") {
         return (example) ? ", example: " + example : ""
     }
